@@ -1,14 +1,18 @@
 <template>
-  <Header/>
-  
-  <Footer/>
+  <pageHeader />
+  <main class="h-[300vh]">
+    
+    <FAQ />
+  </main>
+
+
+   <pageFooter /> 
 </template>
 
 <script setup>
-  import Header from "../src/layouts/Header.vue"
-  import Footer from "../src/layouts/Footer.vue"
+import pageFooter from "./layouts/pageFooter.vue"
+import pageHeader from "./layouts/pageHeader.vue"
+import FAQ from "./components/FAQ.vue";
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

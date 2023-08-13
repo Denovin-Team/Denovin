@@ -1,10 +1,33 @@
 <template>
-  <footer class="flex flex-col items-center relative h-96 p-16">
-    <section class="flex justify-center">
+  <footer class="flex flex-col items-center relative min-h-min pt-16 lg:p-16">
+    <section class="flex justify-center select-none">
       <img src="/images/footer2.png" alt="" />
     </section>
-    <section class="flex flex-wrap items-center divide-x-2 divide-dotted">
-      <div class="flex flex-col gap-5">
+    <section class="flex flex-wrap divide-dotted justify-center w-full p-5 items-center max-lg:gap-5">
+      <div class="flex items-center gap-14 w-96 justify-center">
+        <ul class="space-y-4 list-disc">
+          <li><a href="#">لورم اپیسوم متن</a></li>
+          <li><a href="#">لورم اپیسوم متن</a></li>
+          <li><a href="#">لورم اپیسوم متن</a></li>
+        </ul>
+        <div class="flex flex-wrap w-24 gap-5">
+          <img src="/images/instagram.svg" alt="">
+          <img src="/images/facebook.svg" alt="">
+          <img src="/images/twitter.svg" alt="">
+          <img src="/images/telegram.svg" alt="">
+        </div>
+      </div>
+      <hr class="border-r-2 h-full max-lg:hidden">
+      <div class="w-full max-w-lg">
+        <p class="text-center p-2">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+          متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+        </p>
+      </div>
+      <hr class="border-r-2 h-full max-lg:hidden">
+      <div class="flex flex-col max-md:flex-row gap-5 w-96 max-lg:items-center" dir="ltr">
         <div class="flex gap-3">
           <div class="flex items-center justify-center w-12 rounded-2xl bg-gold message-shadow">
             <svg
@@ -56,25 +79,34 @@
           </div>
         </div>
       </div>
-      <div class="w-72">
-        <p class="text-center p-2">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
-          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
-          متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-        </p>
-      </div>
-      <div></div>
     </section>
-    <section></section>
+    <section>
+      <div class="bg-slate-200 rounded-3xl flex flex-wrap items-center justify-center p-10 gap-10">
+        <img src="/images/footer2.png" alt="" />
+        <img src="/images/footer2.png" alt="" />
+        <img src="/images/footer2.png" alt="" />
+        <img src="/images/footer2.png" alt="" />
+      </div>
+    </section>
   </footer>
+  <div class="flex justify-center items-center p-5 gap-3">
+    <buttom class="w-10 h-10 flex items-center justify-center bg-slate-400/50 rounded-full text-white text-2xl cursor-pointer" @click="backToUp">↑</buttom>
+    <h1>تمام حقوق این وبسایت متعلق به دنوین میباشد</h1>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+const backToUp = ()=>{
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  })
+}
+</script>
 
 <style scoped>
 footer {
-  background-image: url(/images/footer.png);
+  background-image: url(/images/footer.png),linear-gradient(180deg,#0000,#fff);
   background-position-x: 50%;
 }
 .message-shadow{
